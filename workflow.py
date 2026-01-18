@@ -86,14 +86,14 @@ gen_script_executor = AgentExecutor(agent=gen_script_agent, id="gen_script_execu
 workflow = (
     WorkflowBuilder()
     .set_start_executor(main_executor)
-
-    # 工作流连接
-    .add_edge(main_executor, search_executor)
+    # required steps when generate WorkflowOutputEvent during run podcast_app.py
+    # skip steps when only run main.py for workflow
+    .add_edge(main_executor, search_executor) 
     .add_edge(search_executor, main_executor)
-
+    # main steps
     .add_edge(main_executor, gen_script_executor)
     .add_edge(gen_script_executor, main_executor)
-
     .build()
 
 )
+
