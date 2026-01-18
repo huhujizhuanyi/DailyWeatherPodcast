@@ -37,6 +37,13 @@ This project creates a fully automated pipeline for producing a daily weather po
 
 ## Run
 
+Only run workflow like below, then get like screenshot:
+```bash
+
+python main.py
+```
+
 Run the main script:
 ```bash
+
 bash run_vibe_voice.sh
