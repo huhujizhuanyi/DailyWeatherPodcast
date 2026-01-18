@@ -86,9 +86,14 @@ gen_script_executor = AgentExecutor(agent=gen_script_agent, id="gen_script_execu
 workflow = (
     WorkflowBuilder()
     .set_start_executor(main_executor)
+
     # 工作流连接
+    .add_edge(main_executor, search_executor)
+    .add_edge(search_executor, main_executor)
+
     .add_edge(main_executor, gen_script_executor)
     .add_edge(gen_script_executor, main_executor)
 
     .build()
+
 )
