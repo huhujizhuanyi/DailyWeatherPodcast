@@ -43,7 +43,8 @@ Only run workflow like below, then get like screenshot:
 python main.py
 ```
 
-Run the main script:
+Run the main bash file to auto generate voie file for daily weather:
 ```bash
 
 bash run_vibe_voice.sh
+
