@@ -37,15 +37,16 @@ This project creates a fully automated pipeline for producing a daily weather po
 
 ## Run
 
-Only run workflow like below, then get like screenshot:
+Only run workflow like below, then get like ![screenshot](./screenshot_for_running_workflow.PNG):
 ```bash
 
 python main.py
 ```
 
-Run the main bash file to auto generate voice file for daily weather:
+Run the main bash file to auto generate ![voice file](./podcast_generated.wav) for daily weather:
 ```bash
 
 bash run_vibe_voice.sh
+
 
 
